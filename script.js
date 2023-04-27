@@ -66,12 +66,12 @@ getNewQuestions = () => {
     if (availableQuestions.length === 0 || questionCounter > MAX_QUESTIONS) {
         localStorage.setItem("mostRecentScore", score)
 
-        return window.location.assign('/end.html');
+        return window.location.assign('last-page.html');
     }
 
     // This is supposed to calculate what question the user is in and correspond to which percentage the user is in.
     questionCounter++
-    // progressText.innerText = `Question ${questionCounter} of ${MAX_QUESTIONS}`
+    // this line of code breaks the code --- needs to fix progressText.innerText = `Question ${questionCounter} of ${MAX_QUESTIONS}`
     progressBarFull.style.width = `${(questionCounter/MAX_QUESTIONS) * 100}%`
 
 
@@ -79,11 +79,10 @@ getNewQuestions = () => {
     const questionsIndex = Math.floor(Math.random() * availableQuestions.length);
     currentQuestion = availableQuestions[questionsIndex];
     // detects the question it'll ask
-    questions.innerText = currentQuestion.questions;
+    question.innerText = currentQuestion.question;
 
     choices.forEach(choice => {
-        const number = choice.getAttribute('data-number');
-        console.log(currentQuestion["choice" + number])
+        const number = choice.dataset["number"];
         choice.innerText = currentQuestion["choice" + number];
     })
 
