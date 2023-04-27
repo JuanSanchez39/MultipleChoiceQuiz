@@ -21,7 +21,7 @@ let questions = [
         choice1: "Washington DC",
         choice2: "Hawaii",
         choice3: "Little havana",
-        Choice4: "Texas",
+        choice4: "Texas",
         answer: 1,
 
     },
@@ -30,7 +30,7 @@ let questions = [
         choice1: " 10",
         choice2: "7",
         choice3: "12",
-        Choice4: "6",
+        choice4: "6",
         answer: 4,
     },
     {
@@ -38,7 +38,7 @@ let questions = [
         choice1: "Smith",
         choice2: "Sanchez",
         choice3: "Krombopulos",
-        Choice4: "Slimslom",
+        choice4: "Slimslom",
         answer: 2,
     },
     {
@@ -46,7 +46,7 @@ let questions = [
         choice1: "Steve Jobs",
         choice2: "Jeff Bezos",
         choice3: "Barack Obama",
-        Choice4: "Bill Gates",
+        choice4: "Bill Gates",
         answer: 4,
     }
 ]
@@ -79,10 +79,11 @@ getNewQuestions = () => {
     const questionsIndex = Math.floor(Math.random() * availableQuestions.length);
     currentQuestion = availableQuestions[questionsIndex];
     // detects the question it'll ask
-    question.innerText = currentQuestion.question;
+    questions.innerText = currentQuestion.questions;
 
     choices.forEach(choice => {
-        const number = choice.dataset["number"];
+        const number = choice.getAttribute('data-number');
+        console.log(currentQuestion["choice" + number])
         choice.innerText = currentQuestion["choice" + number];
     })
 
