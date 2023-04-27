@@ -1,16 +1,16 @@
 :root {
-    background-color: azure;
+    background-color: rgb(186, 183, 183);
 }
 
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-size: 30px;
+    font-size: 25px;
     font-family: 'Times New Roman', Times, serif;
 }
 h1 {
-    font-size: 5.4rem;
+    font-size: 35px;
     color:black;
     margin-bottom: 3rem;
 

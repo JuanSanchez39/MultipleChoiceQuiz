@@ -1,0 +1,74 @@
+body {
+    color: #000000ef;
+
+}
+
+/* Answers styling  */
+
+.choice-container {
+    display: flex;
+    margin-bottom: 0.8rem;
+    width: 100;
+    border-radius: 4px;
+    background:  rgb(16, 125, 172);
+    font-size: 3rem;
+    min-width: 80rem;
+}
+.choice-container:hover {
+    cursor: pointer;
+    box-shadow: 0 0.4rem 1.4rem 0 rgba(187, 230, 17, 0.981);
+    transform: scale(1.0015);
+    transition: transform 100ms;
+}
+
+.choice-prefix {
+    padding: 2rem 2.5rem;
+    color: rgb(244, 244, 243);
+}
+
+.choice-text {
+    padding: 2rem;
+    width: 100%;
+}
+/* This is when the user chooses the correct answer */
+.correct {
+    background: linear-gradient(32deg , green) 100%;
+}
+/* This is when the user chooses the incorrect answer */
+.incorrect {
+    background: linear-gradient(32deg , red) 100%;
+}
+
+/* H.U.D */
+#hud {
+    display: flex;
+    justify-content: space-between;
+}
+
+.hud.choice-prefix {
+    text-align: center;
+    font: size 2rem; ;
+}
+.hud-main-text {
+    text-align: center;
+}
+
+#progressBar {
+    width: 20rem;
+    height: 3rem;
+    border: 0.2rem solid rgb(70, 123, 223);
+    border-radius: 50px;
+    overflow: hidden;
+}
+#progressBarFull {
+    height: 100%;
+    background: rgb(70, 123, 223);
+    width: 0%;
+
+}
+
+@media screen and ( max-width: 768px) {
+    .choice-container {
+        min-width: 40rem;
+    }
+}
