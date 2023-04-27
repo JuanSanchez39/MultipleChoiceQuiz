@@ -26,7 +26,7 @@ let questions = [
 
     },
     {
-        question: " In teh marvel universe, how many Infinity Stones are there ? ",
+        question: " In the marvel universe, how many Infinity Stones are there ? ",
         choice1: " 10",
         choice2: "7",
         choice3: "12",
@@ -57,7 +57,7 @@ const MAX_QUESTIONS = 4;
 startQuiz = () => {
     questionCounter = 0;
     score = 0;
-    availableQuestions = [...question];
+    availableQuestions = [...questions];
     getNewQuestions();
 
 }
@@ -66,13 +66,13 @@ getNewQuestions = () => {
     if (availableQuestions.length === 0 || questionCounter > MAX_QUESTIONS) {
         localStorage.setItem("mostRecentScore", score)
 
-        return window.location.assign('/end.html')
+        return window.location.assign('/end.html');
     }
 
     // This is supposed to calculate what question the user is in and correspond to which percentage the user is in.
     questionCounter++
-    progressText.innerText = 'Question ${questionCounter} of ${MAX_QUESTIONS}';
-    progressBarFull.style.width = '${(questionCounter/MAX_QUESTIONS) * 100]%';
+    // progressText.innerText = `Question ${questionCounter} of ${MAX_QUESTIONS}`
+    progressBarFull.style.width = `${(questionCounter/MAX_QUESTIONS) * 100}%`
 
 
     // calculates the question value
@@ -83,7 +83,7 @@ getNewQuestions = () => {
 
     choices.forEach(choice => {
         const number = choice.dataset["number"];
-        choice.innerText - currentQuestion["number"];
+        choice.innerText = currentQuestion["choice" + number];
     })
 
 
@@ -120,3 +120,10 @@ choices.forEach(choice => {
     })
 
 })
+
+incrementScore = num => {
+    score +=num;
+    scoreText.innerText = score
+}
+
+startQuiz()
