@@ -56,7 +56,7 @@ const MAX_QUESTIONS = 4;
 
 startQuiz = () => {
     questionCounter = 0;
-    score = 0;
+    score = 100;
     availableQuestions = [...questions];
     getNewQuestions();
 
@@ -104,7 +104,7 @@ choices.forEach(choice => {
             "incorrect";
 
         if (classToApply === "correct") {
-            incrementScore(SCORE_POINTS)
+            incrementScore(SCORE_POINTS)      //look for away to decrease points once you've added time
         }
 
         selectedChoice.parentElement.classList.add(classToApply);
@@ -121,9 +121,9 @@ choices.forEach(choice => {
 
 })
 
-incrementScore = num => {
+incrementScore = num => {                           //<----- decrement score based on wrong answers / wrong answer also decreases time left.
     score +=num;
-    scoreText.innerText = score
-}
+     scoreText.innerText = score
+} 
 
 startQuiz()

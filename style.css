@@ -14,19 +14,22 @@
     font-size: 25px;
     font-family: 'Times New Roman', Times, serif;
 }
+
 h1 {
     font-size: 35px;
-    color:black;
+    color: black;
     margin-bottom: 3rem;
 
 }
-h2{
+
+h2 {
     font-size: 4.2rem;
     margin-bottom: 4rem;
 }
+
 .container {
     width: 100vw;
-    height:100vh;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -36,7 +39,7 @@ h2{
 }
 
 .text-center {
-    text-align : center;
+    text-align: center;
 }
 
 .justify-center {
@@ -55,11 +58,11 @@ h2{
 }
 
 .text-center {
-    text-align : center;
+    text-align: center;
 }
 
-.hidden{
-    display : none;
+.hidden {
+    display: none;
 }
 
 .btn {
@@ -69,31 +72,31 @@ h2{
     margin-bottom: 1rem;
     text-decoration: none;
     color: black;
-    background: linear-gradient(90deg , rgb(9, 76 ,105) 0%, rgb(0,102,255) 100% );
+    background: linear-gradient(90deg, rgb(9, 76, 105) 0%, rgb(0, 102, 255) 100%);
     border-radius: 40px;
 }
 
 .btn:hover {
     cursor: pointer;
-    box-shadow: 0 0.5rem 1.2rem 0  rgba(9, 76 ,105, 0.3) ;
+    box-shadow: 0 0.5rem 1.2rem 0 rgba(9, 76, 105, 0.3);
     transition: transform 165ms;
     transform: scale(1.06);
 }
 
 
 .btn[disabled]:hover {
-    cursor : not-allowed;
+    cursor: not-allowed;
     box-shadow: none;
     transform: none;
 }
 
 
 #highscore-btn {
-    background: linear-gradient(90deg , rgb(100, 17 ,75) 0%, rgb(92,17,255) 100% );
+    background: linear-gradient(90deg, rgb(100, 17, 75) 0%, rgb(92, 17, 255) 100%);
 }
 
 #highscore-btn:hover {
-   box-shadow:0 0.5rem 1.2rem 0  rgba(9, 76 ,105, 0.3) ; 
+    box-shadow: 0 0.5rem 1.2rem 0 rgba(9, 76, 105, 0.3);
 }
 
 
@@ -104,7 +107,7 @@ last page CSS */
     width: 100;
     display: flex;
     flex-direction: column;
-    align-items:center;
+    align-items: center;
     max-width: 30rem;
 }
 
@@ -114,12 +117,14 @@ input {
     padding: 1.5rem;
     font-size: 1.8rem;
     border: none;
-    box-shadow: 0.01rem 1.4rem 0 rgb(0,102,255);
+    box-shadow: 0.01rem 1.4rem 0 rgb(0, 102, 255);
     border-radius: 10px;
 }
-input::placeholder{
+
+input::placeholder {
     color: gray;
 }
+
 #username {
     margin-bottom: 3rem;
     width: 100%;
@@ -129,11 +134,9 @@ input::placeholder{
 #end-text {
     font-size: 2.4rem;
     color: rgb(2, 2, 2);
-    text-align:center;
+    text-align: center;
 }
 
 #saveScoreBtn {
     border: none;
 }
-
-

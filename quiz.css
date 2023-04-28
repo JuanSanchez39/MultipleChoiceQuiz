@@ -10,10 +10,11 @@ body {
     margin-bottom: 0.8rem;
     width: 100;
     border-radius: 4px;
-    background:  rgb(16, 125, 172);
+    background: rgb(16, 125, 172);
     font-size: 3rem;
     min-width: 80rem;
 }
+
 .choice-container:hover {
     cursor: pointer;
     box-shadow: 0 0.4rem 1.4rem 0 rgba(187, 230, 17, 0.981);
@@ -30,13 +31,15 @@ body {
     padding: 2rem;
     width: 100%;
 }
+
 /* This is when the user chooses the correct answer */
 .correct {
-    background: linear-gradient(32deg , green) 100%;
+    background: linear-gradient(32deg, green) 100%;
 }
+
 /* This is when the user chooses the incorrect answer */
 .incorrect {
-    background: linear-gradient(32deg , red) 100%;
+    background: linear-gradient(32deg, red) 100%;
 }
 
 /* H.U.D */
@@ -47,8 +50,10 @@ body {
 
 .hud.choice-prefix {
     text-align: center;
-    font: size 2rem; ;
+    font: size 2rem;
+    ;
 }
+
 .hud-main-text {
     text-align: center;
 }
@@ -60,6 +65,7 @@ body {
     border-radius: 50px;
     overflow: hidden;
 }
+
 #progressBarFull {
     height: 100%;
     background: rgb(70, 123, 223);
@@ -67,7 +73,7 @@ body {
 
 }
 
-@media screen and ( max-width: 768px) {
+@media screen and (max-width: 768px) {
     .choice-container {
         min-width: 40rem;
     }
