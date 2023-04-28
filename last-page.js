@@ -1,7 +1,7 @@
 const username = document.querySelector('#username');
 const saveScoreBtn = document.querySelector('#saveScoreBtn');
 const finalScore = document.querySelector('#finealScore');
-const mostRecentScore = document.querySelector('#mostRecentScore');
+const mostRecentScore = localStorage.getItem('mostRecentScore');
 
 const highScores =JSON.parse(localStorage.getItem("highScores")) || [];
 
@@ -10,10 +10,10 @@ const MAX_HIGH_SCORES =5;
 finalScore.innerText = mostRecentScore;
 
 username.addEventListener("keyup", () => {
-    saveScoreBtn.disabled = !username.ariaValueMax;     //allows to save once input was set in.
+    saveScoreBtn.disabled = !username.value;     //allows to save once input was set in.
 })
 
- saveHighScore = e => {
+ savehighScores = e => {
     e.preventDefault ()
 
     const score = {
@@ -31,5 +31,5 @@ username.addEventListener("keyup", () => {
     highScores.splice(5);
 
     localStorage.setItem('highScores', JSON.stringify(highScores));
-    window.location.assign("");
+    window.location.assign("index.html");
 }

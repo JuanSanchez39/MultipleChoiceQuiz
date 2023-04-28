@@ -71,7 +71,7 @@ getNewQuestions = () => {
 
     // This is supposed to calculate what question the user is in and correspond to which percentage the user is in.
     questionCounter++
-    // this line of code breaks the code --- needs to fix progressText.innerText = `Question ${questionCounter} of ${MAX_QUESTIONS}`
+   progressText.innerText = `Question ${questionCounter} of ${MAX_QUESTIONS}`
     progressBarFull.style.width = `${(questionCounter/MAX_QUESTIONS) * 100}%`
 
 
